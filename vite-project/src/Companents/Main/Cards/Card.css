@@ -1,0 +1,371 @@
+.card-container {
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
+  gap: 15px;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+
+  align-items: center;
+  .card {
+    width: 190px;
+    margin: 0 !important;
+    padding: 0.8em;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .card-img {
+    background-color: #ffcaa6;
+    height: 40%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .card-info {
+    padding-top: 10%;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        font-size: 20px;
+        user-select: none;
+        transition: 100ms;
+      }
+      
+      .checkmark {
+        top: 0;
+        left: 0;
+        height: 2em;
+        width: 2em;
+        transition: 100ms;
+        animation: dislike_effect 400ms ease;
+      }
+      
+      .container input:checked ~ .checkmark path {
+        fill: #FF5353;
+        stroke-width: 0;
+      }
+      
+      .container input:checked ~ .checkmark {
+        animation: like_effect 400ms ease;
+      }
+      
+      .container:hover {
+        transform: scale(1.1);
+      }
+      
+      @keyframes like_effect {
+        0% {
+          transform: scale(0);
+        }
+      
+        50% {
+          transform: scale(1.2);
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      @keyframes dislike_effect {
+        0% {
+          transform: scale(0);
+        }
+      
+        50% {
+          transform: scale(1.2);
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+  }
+
+  /*Text*/
+  .text-title {
+    overflow: clip;
+
+    width: 100%;
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--light);
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .text-body {
+    overflow: hidden;
+
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light);
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+  }
+
+  /*Button*/
+  .card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: 0.3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+  }
+
+  /*Hover*/
+  .card-img:hover {
+    transform: translateY(-25%);
+    box-shadow:
+      rgba(226, 196, 63, 0.25) 0px 13px 47px -5px,
+      rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+  }
+
+  .card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+  }
+}
+.ui-like {
+    --icon-size: 24px;
+    --icon-secondary-color: rgb(255, 255, 255);
+    --icon-hover-color: rgb(211, 205, 205);
+    --icon-primary-color: rgb(230, 26, 26);
+    --icon-circle-border: 1px solid var(--icon-primary-color);
+    --icon-circle-size: 35px;
+    --icon-anmt-duration: 0.3s;
+    z-index: 10;
+    top: 20px;
+    position: absolute;
+  }
+  
+  .ui-like input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .ui-like .like {
+    width: var(--icon-size);
+    height: auto;
+    fill: var(--icon-secondary-color);
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+  
+  .like::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  .like::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: var(--icon-circle-border);
+    opacity: 0;
+  }
+  
+  /* actions */
+  
+  .ui-like:hover .like {
+    fill: var(--icon-hover-color);
+  }
+  
+  .ui-like input:checked + .like::after {
+    -webkit-animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circles var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  .ui-like input:checked + .like {
+    fill: var(--icon-primary-color);
+    -webkit-animation: like var(--icon-anmt-duration) forwards;
+    animation: like var(--icon-anmt-duration) forwards;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  
+  .ui-like input:checked + .like::before {
+    -webkit-animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: circle var(--icon-anmt-duration)
+      cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    -webkit-animation-delay: var(--icon-anmt-duration);
+    animation-delay: var(--icon-anmt-duration);
+  }
+  
+  @-webkit-keyframes like {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes like {
+    50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+    }
+  
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  
+  @-webkit-keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circles {
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  
+    40% {
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }

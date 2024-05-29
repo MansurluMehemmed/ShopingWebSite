@@ -1,0 +1,98 @@
+.latest-container {
+  width: 80%;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    p{
+      width: 80px;
+      height: 5px;
+      background-color: red;
+      margin: 0;
+
+    }
+  }
+  .latestdiv-conatiner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    height: 255px;
+    .latest-div {
+      width: 31%;
+      height: 100%;
+      background-color: antiquewhite;
+      display: flex;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+  
+      .div-absolute {
+        width: calc(100% - 60px);
+        height: calc(100% - 60px);
+        background-color: white;
+        box-sizing: border-box;
+        padding: 25px;
+        display: none;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        z-index: 10;
+        gap: 10px;
+        position: absolute;
+        h2{
+          margin: 0;
+        }
+        p{
+          margin: 0;
+
+        }
+        a{
+          color: rgb(232, 68, 68);
+          text-decoration: underline;
+
+        }
+      }
+      
+    }
+    .first{
+      background-image: url("https://themewagon.github.io/coloshop/images/blog_1.jpg");
+    }
+    .second{
+      background-image: url('https://themewagon.github.io/coloshop/images/blog_2.jpg');
+    }
+    .third{
+      background-image: url('https://themewagon.github.io/coloshop/images/blog_3.jpg');
+    }
+    
+    .latest-div:hover .div-absolute {
+      display: flex;
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      transition: opacity 0.3s ease-in-out;
+    }
+    .background-img{
+      width: 100%;
+      height: 100%;
+    }
+    .latest-div:hover .background-img{
+      filter: blur(3px);
+    }
+  }
+  
+  
+}

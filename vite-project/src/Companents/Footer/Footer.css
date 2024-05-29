@@ -1,0 +1,127 @@
+.footer-conatiner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    .footerdiv{
+        display: flex;
+        align-items: center;
+        padding: 60px 0px;
+        width: 80%;
+        justify-content: space-between;
+        .footer{
+            display: flex;
+            width: 50%;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                height: 35px;
+                padding: 0 !important;
+                margin: 0 !important;
+                list-style: none;
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0px 20px;
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        display: block;
+                    }
+                    a:hover{
+
+                        color: #fe4c50;
+                    }
+                }
+            }
+        }
+        .left{
+            align-items: start;
+        }
+        .right{
+            align-items: center;
+            justify-content: end;
+            .card {
+                width: fit-content;
+                height: fit-content;
+                flex-direction: row;
+                background-color: rgb(238, 238, 238);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 25px 25px;
+                gap: 20px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+              }
+              
+              /* for all social containers*/
+              .socialContainer {
+                width: 52px;
+                height: 52px;
+                background-color: rgb(44, 44, 44);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                transition-duration: .3s;
+              }
+              /* instagram*/
+              .containerOne:hover {
+                background-color: #d62976;
+                transition-duration: .3s;
+              }
+              /* twitter*/
+              .containerTwo:hover {
+                background-color: #00acee;
+                transition-duration: .3s;
+              }
+              /* linkdin*/
+              .containerThree:hover {
+                background-color: #0072b1;
+                transition-duration: .3s;
+              }
+              /* Whatsapp*/
+              .containerFour:hover {
+                background-color: #128C7E;
+                transition-duration: .3s;
+              }
+              
+              .socialContainer:active {
+                transform: scale(0.9);
+                transition-duration: .3s;
+              }
+              
+              .socialSvg {
+                width: 17px;
+              }
+              
+              .socialSvg path {
+                fill: rgb(255, 255, 255);
+              }
+              
+              .socialContainer:hover .socialSvg {
+                animation: slide-in-top 0.3s both;
+              }
+              
+              @keyframes slide-in-top {
+                0% {
+                  transform: translateY(-50px);
+                  opacity: 0;
+                }
+              
+                100% {
+                  transform: translateY(0);
+                  opacity: 1;
+                }
+              }
+              
+              
+        }
+
+    }
+}

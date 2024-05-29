@@ -1,0 +1,186 @@
+.payment-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    .pay{
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .divpayment{
+        width: 100%;
+        overflow-y: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        flex-direction: column;
+        .div-payment {
+            display: flex;
+            height: 100px;
+            width: calc(100% - 25px);
+            padding: 25px 0px;
+            max-height: 400px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            .bin-button {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 35px;
+              height: 35px;
+              border-radius: 15px;
+              background-color: rgb(255, 95, 95);
+              cursor: pointer;
+              border: 3px solid rgb(255, 201, 201);
+              transition-duration: 0.3s;
+            }
+            .bin-bottom {
+              width: 15px;
+            }
+            .bin-top {
+              width: 17px;
+              transform-origin: right;
+              transition-duration: 0.3s;
+            }
+            .bin-button:hover .bin-top {
+              transform: rotate(45deg);
+            }
+            .bin-button:hover {
+              background-color: rgb(255, 0, 0);
+            }
+            .bin-button:active {
+              transform: scale(0.9);
+            }
+            
+            .imgandtitle {
+              display: flex;
+              width: 80%;
+              gap: 10px;
+              .divimgcount {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                position: relative;
+                border-radius: 50%;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  border-radius: 50%;
+                }
+                span {
+                  position: absolute;
+                  top: 0;
+                  font-size: 14px;
+                  background-color: red;
+                  width: 20px;
+                  height: 20px;
+                  color: white;
+                  border-radius: 50%;
+                  align-self: center;
+                  justify-self: center;
+                  text-align: center;
+                }
+              }
+              .divtitle {
+                width: calc(100% - 60px);
+                gap: 5px;
+                display: flex;
+                flex-direction: column;
+                .title {
+                  overflow: clip;
+                  text-wrap: nowrap;
+                  text-overflow: ellipsis;
+                  width: 100%;
+                  margin: 0;
+                }
+                .price {
+                  margin: 0;
+                }
+              }
+            }
+            
+            
+          }
+    }
+}
+.divbottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    .cancel{
+        height: 40px;
+        border: none;
+        background-color: red;
+        color: white;
+        padding: 0px 15px;
+        font-size: 18px;
+        font-weight: 800;
+        align-self: flex-start;
+    }
+    .divpaym{
+        display: flex;
+        width:100%;
+        justify-content: space-between;
+        align-items: center;
+        
+        
+        .Btn {
+            width: 130px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(15, 15, 15);
+            border: none;
+            color: white;
+            font-weight: 600;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+            position: relative;
+            overflow: hidden;
+            transition-duration: 0.3s;
+          }
+        
+          .svgIcon {
+            width: 16px;
+          }
+        
+          .svgIcon path {
+            fill: white;
+          }
+        
+          .Btn::before {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            content: "";
+            background-color: white;
+            border-radius: 50%;
+            left: -100%;
+            top: 0;
+            transition-duration: 0.3s;
+            mix-blend-mode: difference;
+          }
+        
+          .Btn:hover::before {
+            transition-duration: 0.3s;
+            transform: translate(100%, -50%);
+            border-radius: 0;
+          }
+        
+          .Btn:active {
+            transform: translate(5px, 5px);
+            transition-duration: 0.3s;
+          }
+    }
+}

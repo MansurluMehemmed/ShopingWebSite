@@ -1,0 +1,7 @@
+[{"id":1, "description":"create ER-diagram", "due":"2020-05-20", "employee":"Alex", "finished":"2019-05-20"},
+ {"id":2, "description":"connect node.js to mysql", "due":"2013-05-20", "employee":"John", "finished":"2017-05-20"},
+ {"id":3, "description":"create get-request handler /task", "employee":"Alex", "finished":"2015-04-20"},
+ {"id":4, "description":"create post-request handler /task", "due":"2005-04-20", "employee":"Donald"},
+ {"id":5, "description":"create sql-query for get tasks", "employee":"John"},
+ {"id":6, "description":"create sql-query for add task", "due":"2004-03-20", "employee":"Martin", "finished":"2004-03-20"},
+ {"id":7, "description":"configure server to auto deploy", "due":"2012-03-20"}]

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../../State/Slice/FetchSlice";
 import { add } from "../../../State/Slice/CardSlice";
 import { favoriteAdd } from "../../../State/Slice/FavoriteSlice";
+import { Link } from "react-router-dom";
 export const Card = () => {
   const data = useSelector((state) => state.fetch);
   const category = useSelector((state) => state.category.category);
@@ -46,10 +47,13 @@ export const Card = () => {
               <div class="card-img">
                 <img src={item.images} alt="" />
               </div>
-              <div class="card-info">
-                <p class="text-title">{item.title} </p>
-                <p class="text-body">{item.description}</p>
-              </div>
+              <Link to="/single">
+                <div className="card-info">
+                  <p className="text-title">{item.title} </p>
+
+                  <p className="text-body">{item.description}</p>
+                </div>
+              </Link>
               <div class="card-footer">
                 <span class="text-title">${item.price}</span>
 
@@ -71,15 +75,15 @@ export const Card = () => {
         } else if (item.category === category) {
           return (
             <div key={item.id} class="card">
-              <label
-                key={item.id}
-                
-                class="ui-like"
-              >
+              <label key={item.id} class="ui-like">
                 <input type="checkbox" />
-                <div key={item.id} onClick={() => {
-                  dispatch(favoriteAdd(item));
-                }} className="like">
+                <div
+                  key={item.id}
+                  onClick={() => {
+                    dispatch(favoriteAdd(item));
+                  }}
+                  className="like"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -100,18 +104,19 @@ export const Card = () => {
               <div className="card-img">
                 <img src={item.images} alt="" />
               </div>
-              <div className="card-info">
-                <p className="text-title">{item.title} </p>
-                <p className="text-body">{item.description}</p>
-              </div>
+              <Link to="/single">
+                <div className="card-info">
+                  <p className="text-title">{item.title} </p>
+
+                  <p className="text-body">{item.description}</p>
+                </div>
+              </Link>
               <div className="card-footer">
                 <span className="text-title">${item.price}</span>
 
                 <div
                   className="card-button"
                   onClick={() => {
-                    
-                   
                     dispatch(add({ ...item, count: 1 }));
                   }}
                 >

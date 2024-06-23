@@ -124,7 +124,7 @@
 
     font-size: 1rem;
     font-weight: 600;
-    color: var(--light);
+    color: var(--light) !important;
     text-transform: capitalize;
     text-wrap: nowrap;
     text-overflow: ellipsis;
@@ -368,4 +368,7 @@
       transform: scale(0.8);
       opacity: 0;
     }
+  }
+  a{
+    color: #252525 !important;
   }

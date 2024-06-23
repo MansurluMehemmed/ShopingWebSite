@@ -10,6 +10,7 @@ import { Login } from "./Companents/Login/Login";
 import { Payment } from "./Companents/Payment/Payment";
 import { Search } from "./Companents/Search/Search";
 import { PayMentCard } from "./Companents/Payment/PayMentCard";
+import { SingleProd } from "./Companents/SingleProduct/SingleProd";
 function App() {
   return (
     <div className="div-container">
@@ -21,6 +22,7 @@ function App() {
         <Route path="/payment" element={<Payment/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/payment/pay" element={<PayMentCard/>}/>
+        <Route path="/single" element={<SingleProd/>}/>
       </Routes>
      
     </div>

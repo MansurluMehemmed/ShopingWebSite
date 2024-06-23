@@ -1,0 +1,162 @@
+.single-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .divsingle{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .divimg{
+            width: 48%;
+            height: 520px;
+            
+        }
+        .divinfo{
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            h2{
+                font-size: 36px;
+                margin: 0;
+                
+            }
+            p{
+                margin: 0;
+
+            }
+            button{
+                width: 100%;
+                background-color: rgb(179, 178, 177);
+                border: none;
+
+            }
+            span{
+                display: inline-block;
+                font-size: 24px;
+                color: #fe4c50;
+                font-weight: 500;
+                line-height: 30px;
+                margin-top: 2px;
+            }
+            .divbottom{
+                display: flex;
+                width: 100%;
+                p{
+                    margin: 0;
+
+                }
+                .divquality{
+                    width: 132px;
+                    height: 40px;
+                    border: 1px solid;
+                    padding: 5px ;
+                    box-sizing: border-box;
+                    align-items: center;
+                    justify-content: center;
+                    button{
+                        border: none;
+
+                    }
+                    button:hover{
+                        color: rgb(221, 221, 221);
+                    }
+                    span{
+
+                    }
+
+                }
+                .add-button{
+                    background-color: red;
+                    color: white;
+                    border: 1px solid red;
+                    width: 160px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                }
+                .container {
+                    background-color: rgb(36, 36, 36);
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                    padding: 10px 15px 10px 10px;
+                    cursor: pointer;
+                    user-select: none;
+                    border-radius: 10px;
+                    box-shadow: rgba(46, 46, 46, 0.2) 0px 8px 24px;
+                    color: rgb(255, 255, 255);
+                  }
+                  
+                  #favorite {
+                    display: none;
+                  }
+                  
+                  #favorite:checked + .container svg {
+                    fill: hsl(0deg 100% 50%);
+                    stroke: hsl(0deg 100% 50%);
+                    animation: heartButton 1s;
+                  }
+                  
+                  @keyframes heartButton {
+                    0% {
+                      transform: scale(1);
+                    }
+                  
+                    25% {
+                      transform: scale(1.3);
+                    }
+                  
+                    50% {
+                      transform: scale(1);
+                    }
+                  
+                    75% {
+                      transform: scale(1.3);
+                    }
+                  
+                    100% {
+                      transform: scale(1);
+                    }
+                  }
+                  
+                  #favorite + .container .action {
+                    position: relative;
+                    overflow: hidden;
+                    display: grid;
+                  }
+                  
+                  #favorite + .container .action span {
+                    grid-column-start: 1;
+                    grid-column-end: 1;
+                    grid-row-start: 1;
+                    grid-row-end: 1;
+                    transition: all 0.5s;
+                  }
+                  
+                  #favorite + .container .action span.option-1 {
+                    transform: translate(0px, 0%);
+                    opacity: 1;
+                  }
+                  
+                  #favorite:checked + .container .action span.option-1 {
+                    transform: translate(0px, -100%);
+                    opacity: 0;
+                  }
+                  
+                  #favorite + .container .action span.option-2 {
+                    transform: translate(0px, 100%);
+                    opacity: 0;
+                  }
+                  
+                  #favorite:checked + .container .action span.option-2 {
+                    transform: translate(0px, 0%);
+                    opacity: 1;
+                  }
+                  
+            }
+        }
+    }
+}

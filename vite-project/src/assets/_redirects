@@ -1,1 +1,4 @@
-/* /index.html 200
+[[redirect]]
+from "/*"
+to "/index.html"
+200

@@ -8,7 +8,7 @@ export const PaySlice = createSlice({
   reducers: {
     addPay: (state, action) => {
       state.list = [...state.list,...action.payload]
-      console.log(action.payload,'list')
+      
     
     },
     deletePay:(state,action)=>{

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./Card.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../../../State/Slice/FetchSlice";
-import { add } from "../../../State/Slice/CardSlice";
+import { fetchData, single } from "../../../State/Slice/FetchSlice";
+import { add, qualityPlus } from "../../../State/Slice/CardSlice";
 import { favoriteAdd } from "../../../State/Slice/FavoriteSlice";
 import { Link } from "react-router-dom";
 export const Card = () => {
@@ -13,6 +13,7 @@ export const Card = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
+
   return (
     <div className="card-container">
       {data.data.map((item) => {
@@ -47,13 +48,19 @@ export const Card = () => {
               <div class="card-img">
                 <img src={item.images} alt="" />
               </div>
-              <Link to="/single">
-                <div className="card-info">
-                  <p className="text-title">{item.title} </p>
 
-                  <p className="text-body">{item.description}</p>
-                </div>
-              </Link>
+              <div className="card-info">
+                <Link to="/single">
+                  <p onClick ={() => {
+                      dispatch(single(item.id))
+                      dispatch(qualityPlus({...item,count:1}))
+                    }} className="text-title">
+                    {item.title} 
+                  </p>
+                </Link>
+                <p className="text-body">{item.description}</p>
+              </div>
+
               <div class="card-footer">
                 <span class="text-title">${item.price}</span>
 

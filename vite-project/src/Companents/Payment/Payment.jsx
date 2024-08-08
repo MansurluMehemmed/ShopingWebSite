@@ -19,7 +19,7 @@ export const Payment = () => {
       <div className="pay">
       <div className="divpayment">
         {pay.map((item) => {
-          console.log(item.id);
+          
           return (
             <div className="div-payment" key={item.id}>
               <div className="imgandtitle">

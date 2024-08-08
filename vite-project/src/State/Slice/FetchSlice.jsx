@@ -3,7 +3,8 @@ const initialState = {
     isLoading:false,
     data:[],
     error:false,
-    search:[]
+    search:[],
+    singleProd:[]
 }
 export const fetchData = createAsyncThunk('fetchSlice',async()=>{
     const data = await fetch('http://localhost:4000/products');
@@ -16,6 +17,9 @@ export const FetchSlice = createSlice({
         addSearch:(state,action)=>{
             state.search = state.search.filter(item=>item.title.trim().includes(action.payload))
            
+        },
+        single:(state,action)=>{
+            state.singleProd = state.data.filter(item=>item.id === action.payload)
         }
     },
     extraReducers:(builder)=>{
@@ -34,5 +38,5 @@ export const FetchSlice = createSlice({
     }
 })
 
-export const {addSearch} = FetchSlice.actions
+export const {addSearch,single} = FetchSlice.actions
 export default FetchSlice.reducer

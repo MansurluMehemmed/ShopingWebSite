@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAll, deleteBtn } from "../../State/Slice/CardSlice";
+import { add, deleteAll, deleteBtn, minus } from "../../State/Slice/CardSlice";
 import { addPay } from "../../State/Slice/PaySlice";
 import { Link } from "react-router-dom";
 import { addSearch } from "../../State/Slice/FetchSlice";
@@ -12,6 +12,9 @@ export const Header = () => {
   const [logout, setLogout] = useState(false);
   const basket = useSelector((state) => state.cart.list);
   const dispatch = useDispatch();
+ 
+
+
   const handleChange = ()=>{
     // console.log(input,'input')
     
@@ -115,6 +118,16 @@ export const Header = () => {
                     <p className="price"> $ {item.price} </p>
                   </div>
                 </div>
+                <div className="div-incdec">
+                  <button onClick={()=>{
+                    dispatch(minus(item))
+                  }} className="button-incdec" type="button">-</button>
+                  <span className="span-count">{item.count}</span>
+                  <button onClick={()=>{
+                    dispatch(add({...item}))
+                    console.log('clicked')
+                  }} className="button-incdec" type="button">+</button>
+                </div>
                 <button class="bin-button" onClick={()=>dispatch(deleteBtn({...item}))} >
                   <svg
                     class="bin-top"
@@ -181,13 +194,11 @@ export const Header = () => {
           </button>
           
           <Link to="/payment">
-          <button
+          <button 
             onClick={() => {
               setDisplay(false);
               dispatch(deleteAll());
-             
               dispatch(addPay([...basket]));
-
             }}
             className="Btn"
           >

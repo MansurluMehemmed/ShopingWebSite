@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import React, { act } from "react";
 const initialState = {
   list: [],
+  quality:[]
 };
 export const CardSlice = createSlice({
   name: "cart",
@@ -27,6 +28,30 @@ export const CardSlice = createSlice({
 
 
     },
+    minus:(state,action)=>{
+      
+      let i;
+       if(state.list.find((item,index)=>{
+        i=index
+        return item.id === action.payload.id})){
+          if(state.list[i].count>1){
+            state.list[i].count--
+            state.list = [...state.list]
+          }
+       
+        
+       }
+    }
+    ,
+    qualityPlus:(state,action)=>{
+      state.quality = [...state.quality,action.payload]
+     
+    },
+    qualityMinus:(state,action)=>{
+      if(state.quality.length>1){
+        state.quality.pop() 
+      }
+    },
 
     deleteBtn: (state, action) => {
       state.list = state.list.filter((item) => item.id !== action.payload.id);
@@ -36,5 +61,5 @@ export const CardSlice = createSlice({
     },
   },
 });
-export const { add, deleteBtn, deleteAll } = CardSlice.actions;
+export const { add, deleteBtn, deleteAll,minus,qualityPlus,qualityMinus } = CardSlice.actions;
 export default CardSlice.reducer;

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { cate } from '../../../State/Slice/CategorySlice';
 export const Category = () => {
     const category = useSelector(state=>state.category.category)
-    console.log(category,'active')
+    
     const dispatch = useDispatch()
     const handleClick = (e)=>{
         dispatch(cate(e.target.id))

@@ -1,16 +1,17 @@
 .single-container{
     width: 100%;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     .divsingle{
         width: 80%;
         display: flex;
-        align-items: center;
+        
         justify-content: space-between;
         .divimg{
             width: 48%;
-            height: 520px;
+            
             
         }
         .divinfo{
@@ -18,6 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: start;
+            
             h2{
                 font-size: 36px;
                 margin: 0;
@@ -27,46 +29,75 @@
                 margin: 0;
 
             }
-            button{
-                width: 100%;
+            .delivery-botton{
+              margin-top: 50px;
+              padding: 10px 0px;
+              width: 100%;
                 background-color: rgb(179, 178, 177);
                 border: none;
 
             }
-            span{
+            .span-price{
                 display: inline-block;
                 font-size: 24px;
                 color: #fe4c50;
                 font-weight: 500;
                 line-height: 30px;
-                margin-top: 2px;
+                margin-top: 50px;
             }
             .divbottom{
                 display: flex;
                 width: 100%;
-                p{
+                margin-top: 50px;
+                flex-direction: row;
+                .quality{
+                  display: flex;
+                  gap: 15px;
+                  align-items: center;
+                  justify-content: baseline;
+                  p{
                     margin: 0;
-
+                    font-size: 20px;
+                    
                 }
                 .divquality{
                     width: 132px;
                     height: 40px;
                     border: 1px solid;
+                    display: flex;
                     padding: 5px ;
                     box-sizing: border-box;
                     align-items: center;
                     justify-content: center;
+                   .divqualitycont{
+                    width: 60%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     button{
-                        border: none;
+                      border: none;
+                      width: 20px;
+                      color: black;
+                      font-weight: bold;
+                      background-color: white;
+                      font-size: 20px;
+                      border-radius: 3px;
+                      height: 20px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      
+                  }
+                  button:hover{
+                      color: rgb(221, 221, 221);
+                  }
+                  span{
+                    font-size: 16px;
+                  }
+                   }
 
-                    }
-                    button:hover{
-                        color: rgb(221, 221, 221);
-                    }
-                    span{
-
-                    }
-
+                }
                 }
                 .add-button{
                     background-color: red;

@@ -176,7 +176,7 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 500px;
+    width: 600px;
     gap: 10px;
     min-height: 100px;
     background-color: #e4e4e8;
@@ -190,7 +190,7 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 445px;
+      width: 545px;
       max-height: 400px;
       overflow-y: scroll;
       margin: 20px 0px;
@@ -201,6 +201,7 @@ header {
         padding: 25px 0px;
         box-sizing: border-box;
         justify-content: space-between;
+        align-items: center;
         .bin-button {
           display: flex;
           flex-direction: column;
@@ -235,6 +236,7 @@ header {
         .imgandtitle {
           display: flex;
           width: 60%;
+          
           .divimgcount {
             width: 50px;
             height: 50px;
@@ -277,12 +279,38 @@ header {
             }
           }
         }
+        .div-incdec{
+          width: 75px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .span-count{
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+          }
+          .button-incdec{
+            width: 25px;
+            height: 25px;
+            border: 1px solid;
+            color: #080808;
+            font-size: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            
+          }
+          .button-incdec:hover{
+            background-color: #e3e3e6;
+          }
+        }
       }
     }
   }
   .divBtn {
     display: flex;
-    width: 450px;
+    width: 95%;
     align-items: center;
     justify-content: space-between;
     .deleteAll {

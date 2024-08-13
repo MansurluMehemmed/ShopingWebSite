@@ -16,7 +16,7 @@ export const Slide = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="https://img.freepik.com/premium-photo/beautiful-young-woman-blouse-with-naked-shoulders-fashionable-sunglasses-holding-stylish-shoes-hand-posing-pink-background-isolated-copy-space-right-advertising_179135-511.jpg" className="d-block w-100" alt="..."/>
+      <img src="https://themewagon.github.io/coloshop/images/slider_1.jpg" className="d-block w-100" alt="..."/>
       <div className="carousel-caption d-none d-md-block">
         <h6>SPRING / SUMMER COLLECTION 2024</h6>
         <h1>Get up to 30% Off New Arrivals</h1>

@@ -5,8 +5,10 @@
     "title": "Classic Red Jogger Sweatpants",
     "price": 98,
     "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
-    "images": 
-    "https://i.imgur.com/9LFjwpI.jpeg",
+    "images":[
+      "https://i.imgur.com/9LFjwpI.jpeg","https://i.imgur.com/3rfp691.jpg"
+    ] 
+    ,
     "category": "Woman"
     },
     {
